@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In ∙ VenueBook</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+</head>
+
+<!--<div class="brand">
+    <h1>VenueBook<br><p>Discover & Book your perfect venue</p></h1>
+</div>-->
+
+<body>
+
+<div class="brand-container">
+    <h1>VenueBook<br>
+        <span>Discover & Book your perfect venue</span>
+    </h1>
+</div>
+    
+<div class="welcome-page">
+    <form autocomplete="off">
+        <h1>Welcome back!</h1>
+        
+        <div class="input-box">
+            <input type="text" id="userEmail" placeholder="admin@venuebook.co" required>
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" id="userPass" placeholder="12345678" required>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <div class="forgot-pass">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="button" class="btn" onclick="validateLogin()">Login</button>
+
+        <div class="register">
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+    </form>
+</div>
+</body>
+
+<script>
+    function validateLogin() {
+        const email = document.getElementById('userEmail').value;
+        const pass = document.getElementById('userPass').value;
+
+        const adminEmail = "admin@venuebook.co";
+        const adminPass = "123";
+
+        const clientEmail = "user@gmail.com";
+        const clientPass = "123";
+
+        if (email === adminEmail && pass === adminPass) {
+            window.location.href = "../main/admin/adm-dashboard.html"; 
+        } 
+        else if (email === clientEmail && pass === clientPass) {
+            window.location.href = "../main/client/cli-dashboard.html";
+        } 
+        else {
+            alert("Invalid email or password. Please try again.");
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VenueBook | Corporate Event Management</title>
+</head>
+<body>
+
+    <nav>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>VenueBook</h2>
+            <button onclick="location.href='../../login/login.html'">Log Out</button>
+        </div>
+        <p><strong>Role:</strong> Venue Coordinator (Admin)</p>
+        <ul>
+            <li><a href="#dashboard">Dashboard Overview</a></li>
+            <li><a href="#calendar">Interactive Availability Calendar</a></li>
+            <li><a href="#facilities">Hall & Facility Management (CRUD)</a></li>
+            <li><a href="#catering">Catering Tiers & Equipment</a></li>
+            <li><a href="#bookings">Booking Requests & Conflicts</a></li>
+            <li><a href="#payments">Downpayment Tracking</a></li>
+            <li><a href="#reports">Administrative Data Visuals</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        
+        <section id="reports">
+            <h1>Administrative Analytics</h1>
+            <div>
+                <h3>Peak Booking Seasons (Line Graph Placeholder)</h3>
+                <p>[monthly booking venue graph]</p>
+            </div>
+            <div>
+                <h3>Revenue per Event Type (Bar Chart Placeholder)</h3>
+                <p>[chart comparing corporate, private, and wedding]</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="bookings">
+            <h2>Master Booking Schedule</h2>
+            <p><em>Note: System prevents double-booking of specific halls automatically.</em></p>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Event Date</th>
+                        <th>Event Name</th>
+                        <th>Client/Organizer</th>
+                        <th>Assigned Hall</th>
+                        <th>Status</th>
+                        <th>Deposit (50%)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-05-15</td>
+                        <td>Annual Tech Summit</td>
+                        <td>Global Corp Inc.</td>
+                        <td>Grand Plaza A</td>
+                        <td>Confirmed</td>
+                        <td>Paid</td>
+                        <td><button>View Contract</button></td>
+                    </tr>
+                    <tr>
+                        <td>2026-06-10</td>
+                        <td>Product Launch Gala</td>
+                        <td>Innova Group</td>
+                        <td>Sky Lounge</td>
+                        <td><strong>Pending</strong></td>
+                        <td><mark>OVERDUE (Deadline Missed)</mark></td>
+                        <td><button>Send Alert</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="facilities">
+            <h2>Facility & Package Management</h2>
+            <form>
+                <fieldset>
+                    <legend>Add/Edit Facility or Package</legend>
+                    <label>Item Name: <input type="text" name="itemName"></label><br>
+                    <label>Category: 
+                        <select>
+                            <option>Hall/Venue</option>
+                            <option>Catering Tier</option>
+                            <option>Equipment Rental</option>
+                        </select>
+                    </label><br>
+                    <label>Base Rate ($): <input type="number" name="rate"></label><br>
+                    <button type="submit">Save to Inventory</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="catering">
+            <h2>Catering Tiers & Equipment Inventory</h2>
+            
+            <h3>Catering Tiers (CRUD)</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Tier Name</th>
+                        <th>Description</th>
+                        <th>Price Per Guest</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Platinum Elite</td>
+                        <td>5-Course Meal, Open Bar, Butler Service</td>
+                        <td>$150</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Standard Business</td>
+                        <td>Buffet Lunch, Coffee/Tea Station</td>
+                        <td>$65</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <h3>Equipment Rentals</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Item Description</th>
+                        <th>Total Stock</th>
+                        <th>Currently Available</th>
+                        <th>Unit Price ($)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4K Laser Projector</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>200.00</td>
+                        <td><button>Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Wireless Lapel Mic</td>
+                        <td>24</td>
+                        <td>15</td>
+                        <td>50.00</td>
+                        <td><button>Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="contract">
+            <h2>Formal Event Contract</h2>
+            <p><em>draft</em></p>
+            <div id="printable-contract-area">
+                <center>
+                    <h1>SERVICE AGREEMENT</h1>
+                </center>
+                <p><strong>This agreement is between VenueBook and [Client Name].</strong></p>
+                <p><strong>Venue Hall:</strong> [Hall Name]</p>
+                <p><strong>Catering Tier:</strong> [Tier Selection]</p>
+                <p><strong>Equipment:</strong> [Itemized List]</p>
+                <p><strong>Terms:</strong> A 50% downpayment is required to finalize this booking. Cancellation fees apply as per corporate policy.</p>
+                <p>__________________________<br>Signature of Coordinator</p>
+            </div>
+            <button onclick="window.print()">Print/Generate Contract</button>
+        </section>
+
+    </main>
+
+</body>
+</html>

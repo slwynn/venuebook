@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VenueBook | Client Portal</title>
+</head>
+<body>
+
+    <nav>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>VenueBook | Client Portal</h2>
+            <button onclick="location.href='../../login/login.html'">Log Out</button>
+        </div>
+        <p><strong>Role:</strong> Corporate Event Organizer</p>
+        <ul>
+            <li><a href="#new-request">Request a Venue</a></li>
+            <li><a href="#my-bookings">My Scheduled Events</a></li>
+            <li><a href="#packages">Browse Tiers & Equipment</a></li>
+            <li><a href="#profile">Company Settings</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        
+        <section id="new-request">
+            <h1>Request a New Event</h1>
+            <p>Select your preferred date and requirements. Our coordinators will review for conflicts.</p>
+            
+            <form>
+                <fieldset>
+                    <legend>Booking Details</legend>
+                    <label>Event Name: <input type="text" placeholder="e.g. Q4 Strategy Meet"></label><br><br>
+                    
+                    <label>Preferred Date: <input type="date" required></label><br><br>
+                    
+                    <label>Desired Hall: 
+                        <select>
+                            <option>Grand Ballroom (Cap: 500)</option>
+                            <option>Sky Lounge (Cap: 80)</option>
+                            <option>Garden Pavilion (Cap: 200)</option>
+                        </select>
+                    </label><br><br>
+
+                    <label>Catering Preference: 
+                        <select>
+                            <option>Platinum Elite ($150/head)</option>
+                            <option>Standard Business ($65/head)</option>
+                            <option>Coffee & Snacks Only ($25/head)</option>
+                        </select>
+                    </label><br><br>
+
+                    <button type="submit">Submit Request for Review</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="my-bookings">
+            <h2>My Events & Payment Status</h2>
+            <p><em>Check the status of your 50% deposit to secure your dates.</em></p>
+            
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Event Date</th>
+                        <th>Event Name</th>
+                        <th>Venue</th>
+                        <th>Payment Status</th>
+                        <th>Contract</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-07-22</td>
+                        <td>Marketing Workshop</td>
+                        <td>Sky Lounge</td>
+                        <td><span style="color: green;">● Paid (Full)</span></td>
+                        <td><button>View Signed Contract</button></td>
+                    </tr>
+                    <tr>
+                        <td>2026-08-10</td>
+                        <td>Annual Gala Dinner</td>
+                        <td>Grand Ballroom</td>
+                        <td><strong style="color: red;">Pending: 50% Deposit Due</strong></td>
+                        <td><button disabled>Contract Locked</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="packages">
+            <h2>Available Catering Tiers</h2>
+            <div style="display: flex; gap: 20px;">
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <h3>Platinum Elite</h3>
+                    <p>Full 5-course service, premium bar, and sound system included.</p>
+                    <p><strong>$150.00 per guest</strong></p>
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <h3>Standard Business</h3>
+                    <p>Buffet lunch, coffee station, and basic projector included.</p>
+                    <p><strong>$65.00 per guest</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile">
+            <h2>Company Settings</h2>
+            <p>Manage your corporate identity and billing information for contracts.</p>
+            
+            <form>
+                <fieldset>
+                    <legend>Corporate Profile</legend>
+                    <label>Company Name: <input type="text" value="Innova Group LLC"></label><br><br>
+                    
+                    <label>Tax ID / TIN: <input type="text" placeholder="000-000-000"></label><br><br>
+                    
+                    <label>Billing Address: <br>
+                        <textarea rows="3" cols="30">123 Business Way, Metro City</textarea>
+                    </label><br><br>
+
+                    <label>Primary Contact Email: <input type="email" value="user@gmail.com"></label><br><br>
+                    
+                    <label>Receive Automated Payment Reminders: 
+                        <input type="checkbox" checked>
+                    </label><br><br>
+
+                    <button type="button" onclick="alert('Settings Saved!')">Update Profile</button>
+                </fieldset>
+            </form>
+
+            <br>
+            <h3>Authorized Organizers</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Permission Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jane Doe (You)</td>
+                        <td>user@gmail.com</td>
+                        <td>Primary Admin</td>
+                    </tr>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>jsmith@innovagroup.com</td>
+                        <td>Booker Only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>
