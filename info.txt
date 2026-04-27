@@ -1,0 +1,2 @@
+email: admin@venuebook.co  / pw: 123
+email: user@gmail.com      / pw: 123
