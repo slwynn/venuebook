@@ -1,0 +1,8 @@
+    name                email                       password
+
+admin
+    COORDINATOR TEST    coordinator@venuebook.corp  123
+
+client
+    ORGANIZER TEST      organizer@venuebook.corp    123
+    1                   1@gmail.com                 1
